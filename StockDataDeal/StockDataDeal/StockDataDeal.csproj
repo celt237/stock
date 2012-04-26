@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0075BC2E-0C04-42CF-826F-83C94CF70B7A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StockDataDeal</RootNamespace>
+    <AssemblyName>StockDataDeal</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data.SqlCe, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Buz\Analyse.cs" />
+    <Compile Include="Buz\BuzBase.cs" />
+    <Compile Include="Buz\BuzWeekBase.cs" />
+    <Compile Include="Buz\CfblBuz.cs" />
+    <Compile Include="Buz\CrBuz.cs" />
+    <Compile Include="Buz\Formula.cs" />
+    <Compile Include="Buz\HcwhBuz.cs" />
+    <Compile Include="Buz\ImportStock.cs" />
+    <Compile Include="Buz\KLineBuz.cs" />
+    <Compile Include="Buz\MarketSituation.cs" />
+    <Compile Include="Buz\MonthKLine.cs" />
+    <Compile Include="Buz\MonthPsy.cs" />
+    <Compile Include="Buz\MonthXlyg.cs" />
+    <Compile Include="Buz\PowerBuz.cs" />
+    <Compile Include="Buz\PsyBuz.cs" />
+    <Compile Include="Buz\StockAnalyse.cs" />
+    <Compile Include="Buz\StockBuz.cs" />
+    <Compile Include="Buz\TqCr.cs" />
+    <Compile Include="Buz\WeekKLine.cs" />
+    <Compile Include="Buz\WeekPsy.cs" />
+    <Compile Include="Buz\WeekXlyg.cs" />
+    <Compile Include="Buz\XlygBuz.cs" />
+    <Compile Include="Buz\ZhuaQu.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="Data\DB.cs" />
+    <Compile Include="Model\cfbl_info.cs" />
+    <Compile Include="Model\cr_info.cs" />
+    <Compile Include="Model\hcwh_info.cs" />
+    <Compile Include="Model\kline_info.cs" />
+    <Compile Include="Model\power_info.cs" />
+    <Compile Include="Model\psy_info.cs" />
+    <Compile Include="Model\stockanalyse_info.cs" />
+    <Compile Include="Model\stockdeallog.cs" />
+    <Compile Include="Model\stockinfo.cs" />
+    <Compile Include="Model\StockModel.cs" />
+    <Compile Include="Model\StockModelBase.cs" />
+    <Compile Include="Model\tqcr_info.cs" />
+    <Compile Include="Model\weekkline_info.cs" />
+    <Compile Include="Model\weekpsy_info.cs" />
+    <Compile Include="Model\WeekStockModel.cs" />
+    <Compile Include="Model\weekxlyg_info.cs" />
+    <Compile Include="Model\week_info.cs" />
+    <Compile Include="Model\xlyg_info.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
